@@ -9,37 +9,7 @@ class MathProgram:
     
     def add(self, a: float, b: float) -> float:
         """Dodawanie"""
-        result = a + b
-        self.history.append(f"{a} + {b} = {result}")
-        return result
-    
-    def subtract(self, a: float, b: float) -> float:
-        """Odejmowanie"""
-        result = a - b
-        self.history.append(f"{a} - {b} = {result}")
-        return result
-    
-    def multiply(self, a: float, b: float) -> float:
-        """Mnożenie"""
-        result = a * b
-        self.history.append(f"{a} * {b} = {result}")
-        return result
-    
-    def divide(self, a: float, b: float) -> float:
-        """Dzielenie"""
-        if b == 0:
-            raise ValueError("Nie można dzielić przez zero!")
-        result = a / b
-        self.history.append(f"{a} / {b} = {result}")
-        return result
-    
-    def power(self, base: float, exponent: float) -> float:
-        """Potęgowanie"""
-        result = base ** exponent
-        self.history.append(f"{base}^{exponent} = {result}")
-        return result
-    
-    def sqrt(self, x: float) -> float:
+
         """Pierwiastek kwadratowy"""
         if x < 0:
             raise ValueError("Nie można obliczyć pierwiastka z liczby ujemnej!")
