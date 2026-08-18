@@ -8,56 +8,7 @@ class MathProgram:
         self.history = []
     
     def add(self, a: float, b: float) -> float:
-        """Dodawanie"""
-
-        """Pierwiastek kwadratowy"""
-        if x < 0:
-            raise ValueError("Nie można obliczyć pierwiastka z liczby ujemnej!")
-        result = math.sqrt(x)
-        self.history.append(f"√{x} = {result}")
-        return result
-    
-    def factorial(self, n: int) -> int:
-        """Silnia"""
-        if n < 0:
-            raise ValueError("Silnia dla liczby ujemnej nie istnieje!")
-        result = math.factorial(n)
-        self.history.append(f"{n}! = {result}")
-        return result
-    
-    def gcd(self, a: int, b: int) -> int:
-        """Największy wspólny dzielnik"""
-        result = math.gcd(a, b)
-        self.history.append(f"NWD({a}, {b}) = {result}")
-        return result
-    
-    def lcm(self, a: int, b: int) -> int:
-        """Najmniejsza wspólna wielokrotność"""
-        result = (a * b) // math.gcd(a, b)
-        self.history.append(f"NWW({a}, {b}) = {result}")
-        return result
-    
-    def fibonacci(self, n: int) -> list:
-        """Ciąg Fibonacciego"""
-        if n < 1:
-            raise ValueError("n musi być większe od 0!")
-        seq = [0, 1]
-        for i in range(2, n):
-            seq.append(seq[i-1] + seq[i-2])
-        self.history.append(f"Fibonacciego({n}) = {seq[:n]}")
-        return seq[:n]
-    
-    def is_prime(self, n: int) -> bool:
-        """Sprawdzenie czy liczba jest pierwsza"""
-        if n < 2:
-            return False
-        for i in range(2, int(math.sqrt(n)) + 1):
-            if n % i == 0:
-                return False
-        result = True
-        self.history.append(f"Czy {n} jest liczbą pierwszą? {result}")
-        return result
-    
+        """
     def derivative_polynomial(self, coefficients: list) -> list:
         """Pochodna wielomianu"""
         if len(coefficients) <= 1:
